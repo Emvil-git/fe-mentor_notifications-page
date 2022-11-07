@@ -12,6 +12,10 @@
 
     display: flex;
 
+    &--read{
+        background: none;
+    }
+
     &__pfp{
         height: 36px;
         width: 36px;
@@ -55,12 +59,11 @@
 
 
     &__indicator{
-        height: 6px;
-        width: 6px;
         padding: 0;
+        font-size: 6px;
         margin-left: 8px;
-        border-radius: 6px;
-        background-color: $red;
+        transform: translateY(-2px);
+        color: $red;
     }
 }
 

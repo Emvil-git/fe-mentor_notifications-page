@@ -1,6 +1,21 @@
-const NotifCard = ({notifData, isUnread}) => {
+import { CircleFill } from "react-bootstrap-icons";
 
-    console.log(notifData)
+const NotifCard = ({notifData, isUnread, unreadArr, setUnreadArr}) => {
+    const handleClick = () => {
+        console.log(notifData.id)
+        const cUnread = [...unreadArr]
+        const index = cUnread.indexOf(notifData.id)
+        if (index > -1) {
+            cUnread.splice(index, 1)
+            console.log(cUnread);
+            setUnreadArr(cUnread)
+        }
+    }
+
+    const handleBG = () => {
+        if (isUnread) return "nt-card"
+        return "nt-card nt-card--read"
+    }
 
     const byNotifType = () => {
 
@@ -13,24 +28,30 @@ const NotifCard = ({notifData, isUnread}) => {
             case 'post':
                 return(
                     <div className="nt-card__text-sect">
-                        <section className="nt-card__text-top">
-                            <p><a className="nt-card__name">{name}</a> reacted to your recent post <a id="post-title">{data.postTitle}</a></p>
-                            {isUnread && <div className="nt-card__indicator"></div>}
-                        </section>
+                            <span>
+                                <a className="nt-card__name">{name}</a> reacted to your recent post <a id="post-title">{data.postTitle}</a>
+                                {isUnread && <CircleFill className="nt-card__indicator"/>}
+                            </span>
                         <span className="nt-card__time">{`${time} ago`}</span>
                     </div>
                 )
             case 'group':
                 return(
                     <section className="nt-card__text-sect">
-                        <span><a className="nt-card__name">{name}</a> has joined your group <a id="group-name">{data.groupName}</a></span>
+                        <span>
+                            <a className="nt-card__name">{name}</a> has joined your group <a id="group-name">{data.groupName}</a>
+                            {isUnread && <CircleFill className="nt-card__indicator"/>}
+                        </span>
                         <span className="nt-card__time">{`${time} ago`}</span>
                     </section>
                 )
             case 'follow':
                 return(
                     <section className="nt-card__text-sect">
-                        <p><a className="nt-card__name">{name}</a> followed you</p>
+                        <span>
+                            <a className="nt-card__name">{name}</a> followed you
+                            {isUnread && <CircleFill className="nt-card__indicator"/>}
+                        </span>
                         <span className="nt-card__time">{`${time} ago`}</span>
                     </section>
                     
@@ -39,7 +60,10 @@ const NotifCard = ({notifData, isUnread}) => {
                 return(
                     <section className="content-sect--img">
                         <section className="nt-card__text-sect">
-                        <p><a className="nt-card__name">{name}</a> commented on your picture</p>
+                        <span>
+                            <a className="nt-card__name">{name}</a> commented on your picture
+                            {isUnread && <CircleFill className="nt-card__indicator"/>}
+                        </span>
                         <span className="nt-card__time">{`${time} ago`}</span>
                         </section>
                         <img src={data.imgUrl} alt="" className="nt-card__img"/>
@@ -49,7 +73,10 @@ const NotifCard = ({notifData, isUnread}) => {
                 return(
                     <section>
                         <section className="nt-card__text-sect">
-                            <p><a className="nt-card__name">{name}</a> sent you a private message</p>
+                            <span>
+                                <a className="nt-card__name">{name}</a> sent you a private message
+                                {isUnread && <CircleFill className="nt-card__indicator"/>}
+                            </span>
                             <span className="nt-card__time">{`${time} ago`}</span>
                         </section>
 
@@ -60,7 +87,7 @@ const NotifCard = ({notifData, isUnread}) => {
     }
 
     return (
-        <div className="nt-card">
+        <div onClick={handleClick} className={handleBG()}>
             <img src={notifData.user.imgUrl} alt="" className="nt-card__pfp" />
             {byNotifType()}
         </div>
