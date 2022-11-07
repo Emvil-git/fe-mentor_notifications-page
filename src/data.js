@@ -65,7 +65,7 @@ export const notifData = [
         user: usersData.find(user => user.name === "Kimberly Smith"),
         type: "img-comment",
         data: {
-            imgUrl: "../../assets/images/image-chess.webp"
+            imgUrl: "/images/image-chess.webp"
         },
         time: "1 week"
     },

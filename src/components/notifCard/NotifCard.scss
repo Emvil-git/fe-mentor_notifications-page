@@ -1,4 +1,32 @@
 .nt-card {
+    a{
+        font-weight: 800;
+        color: $grey-blu;
+    }
+
+    font-size: 14px;
     padding: 8px;
     background-color: $grey-blu-vl;
+
+    margin-bottom: 8px;
+
+    display: flex;
+
+    &__pfp{
+        height: 40px;
+        width: 40px;
+    }
+
+    &__name{
+        color: $blue-vd !important;
+    }
+
+    &__group{
+        color: $blue !important;
+    }
+
+    &__time{
+        color: $grey-blu;
+    }
+    
 }
