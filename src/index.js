@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import './assets/fonts/static/PlusJakartaSans-ExtraBold.ttf';
+// import './assets/fonts/static/PlusJakartaSans-Medium.ttf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
