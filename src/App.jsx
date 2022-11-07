@@ -12,7 +12,11 @@ function App() {
     setUnreadArr([])
   }
 
-  console.log(unreadArr)
+  const indicator = () => {
+    if(unreadArr.length) return <div className='notif__indicate-value'>{unreadArr.length}</div>
+    return ''
+  }
+  
 
   return (
     <div className="App">
@@ -21,7 +25,8 @@ function App() {
         <header className='notif__header'>
           <section className='notif__indicate'>
             <h3 className='notif__indicate-label'>Notifications</h3>
-            <div className='notif__indicate-value'>3</div>
+            {indicator()}
+            {/* {unreadArr.length && <div className='notif__indicate-value'>{unreadArr.length}</div>} */}
           </section>
 
           <button onClick={readAll} className='notif__allread'>Mark all as read</button>
