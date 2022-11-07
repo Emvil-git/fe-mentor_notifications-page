@@ -52,7 +52,8 @@ export const notifData = [
         user: usersData.find(user => user.name === "Jacob Thompson"),
         type: "group",
         data: {
-            groupName: "Chess Club"
+            groupName: "Chess Club",
+            action: "join"
         },
         time: "1 day"
     },
@@ -88,7 +89,8 @@ export const notifData = [
         user: usersData.find(user => user.name === "Anna Kim"),
         type: "group",
         data: {
-            groupName: "Chess Club"
+            groupName: "Chess Club",
+            action: "leave"
         },
         time: "2 weeks"
     },

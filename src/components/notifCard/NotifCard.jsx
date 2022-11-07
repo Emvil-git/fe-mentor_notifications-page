@@ -39,7 +39,7 @@ const NotifCard = ({notifData, isUnread, unreadArr, setUnreadArr}) => {
                 return(
                     <section className="nt-card__text-sect">
                         <span>
-                            <a className="nt-card__name">{name}</a> has joined your group <a id="group-name">{data.groupName}</a>
+                            <a className="nt-card__name">{name}</a>{ (data.action === "join") ? " has joined the group " : " left the group " }<a id="group-name">{data.groupName}</a>
                             {isUnread && <CircleFill className="nt-card__indicator"/>}
                         </span>
                         <span className="nt-card__time">{`${time} ago`}</span>
