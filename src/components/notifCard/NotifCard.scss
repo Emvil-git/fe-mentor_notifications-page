@@ -4,17 +4,23 @@
         color: $grey-blu;
     }
 
-    font-size: 14px;
-    padding: 8px;
+    font-size: 13px;
+    padding: 12px 16px;
     background-color: $grey-blu-vl;
 
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 
     display: flex;
 
     &__pfp{
-        height: 40px;
-        width: 40px;
+        height: 36px;
+        width: 36px;
+        margin-right: 16px;
+    }
+
+    &__text-sect{
+        display: flex;
+        flex-direction: column;
     }
 
     &__name{
@@ -26,7 +32,26 @@
     }
 
     &__time{
+        margin-top: 2px;
         color: $grey-blu;
     }
+
+    &__img{
+        height: 36px;
+        width: 36px;
+    }
     
+    &__message{
+        margin-top: 8px;
+        border: 1px solid $grey-blu-l2;
+        padding: 16px;
+        border-radius: 4px;
+    }
+
+}
+
+.content-sect--img{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }

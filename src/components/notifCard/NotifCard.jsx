@@ -12,21 +12,21 @@ const NotifCard = ({notifData}) => {
         switch(notifData.type) {
             case 'post':
                 return(
-                    <section>
-                        <p><a className="nt-card__name">{name}</a> reacted to your recent post <a classname="nt-card__title">{data.postTitle}</a></p>
+                    <div className="nt-card__text-sect">
+                        <p><a className="nt-card__name">{name}</a> reacted to your recent post <a id="post-title">{data.postTitle}</a></p>
                         <span className="nt-card__time">{`${time} ago`}</span>
-                    </section>
+                    </div>
                 )
             case 'group':
                 return(
-                    <section>
-                        <p><a className="nt-card__name">{name}</a> has joined your group <a classname="nt-card__group">{data.groupName}</a></p>
+                    <section className="nt-card__text-sect">
+                        <span><a className="nt-card__name">{name}</a> has joined your group <a id="group-name">{data.groupName}</a></span>
                         <span className="nt-card__time">{`${time} ago`}</span>
                     </section>
                 )
             case 'follow':
                 return(
-                    <section>
+                    <section className="nt-card__text-sect">
                         <p><a className="nt-card__name">{name}</a> followed you</p>
                         <span className="nt-card__time">{`${time} ago`}</span>
                     </section>
@@ -34,23 +34,23 @@ const NotifCard = ({notifData}) => {
                 )
             case 'img-comment':
                 return(
-                    <section>
-                        <section>
+                    <section className="content-sect--img">
+                        <section className="nt-card__text-sect">
                         <p><a className="nt-card__name">{name}</a> commented on your picture</p>
                         <span className="nt-card__time">{`${time} ago`}</span>
                         </section>
-                        <img src={data.imgUrl} alt="" />
+                        <img src={data.imgUrl} alt="" className="nt-card__img"/>
                     </section>
                 )
             case 'message':
                 return(
                     <section>
-                        <section>
+                        <section className="nt-card__text-sect">
                             <p><a className="nt-card__name">{name}</a> sent you a private message</p>
                             <span className="nt-card__time">{`${time} ago`}</span>
                         </section>
 
-                        <span>{data.message}</span>
+                        <p className="nt-card__message">{data.message}</p>
                     </section>
                 )
         }
