@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
-import { usersData } from './data';
+import { usersData, notifData } from './data';
+import NotifCard from './components/notifCard/NotifCard';
 
 function App() {
 
@@ -18,6 +19,10 @@ function App() {
         </header>
 
         <main className='notif__cont'>
+          {notifData.map(
+            notif => <NotifCard notifData={notif}/>
+          )}
+
         </main>
       </main>
 
@@ -25,20 +30,6 @@ function App() {
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
       </div>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }
