@@ -2,8 +2,11 @@ import logo from './logo.svg';
 import './App.scss';
 import { usersData, notifData } from './data';
 import NotifCard from './components/notifCard/NotifCard';
+import { useState } from 'react';
 
 function App() {
+
+  const [unreadArr, setUnreadArr] = useState([1,2,3,4,5,6,7]);
 
   return (
     <div className="App">
@@ -20,7 +23,7 @@ function App() {
 
         <main className='notif__cont'>
           {notifData.map(
-            notif => <NotifCard notifData={notif}/>
+            notif => <NotifCard notifData={notif} isUnread={unreadArr.includes(notif.id)}/>
           )}
 
         </main>

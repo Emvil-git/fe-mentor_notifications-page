@@ -1,4 +1,4 @@
-const NotifCard = ({notifData}) => {
+const NotifCard = ({notifData, isUnread}) => {
 
     console.log(notifData)
 
@@ -13,7 +13,10 @@ const NotifCard = ({notifData}) => {
             case 'post':
                 return(
                     <div className="nt-card__text-sect">
-                        <p><a className="nt-card__name">{name}</a> reacted to your recent post <a id="post-title">{data.postTitle}</a></p>
+                        <section className="nt-card__text-top">
+                            <p><a className="nt-card__name">{name}</a> reacted to your recent post <a id="post-title">{data.postTitle}</a></p>
+                            {isUnread && <div className="nt-card__indicator"></div>}
+                        </section>
                         <span className="nt-card__time">{`${time} ago`}</span>
                     </div>
                 )

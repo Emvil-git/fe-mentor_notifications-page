@@ -23,6 +23,11 @@
         flex-direction: column;
     }
 
+    &__text-top{
+        display: flex;
+        align-items: center;
+    }
+
     &__name{
         color: $blue-vd !important;
     }
@@ -48,10 +53,27 @@
         border-radius: 4px;
     }
 
+
+    &__indicator{
+        height: 6px;
+        width: 6px;
+        padding: 0;
+        margin-left: 8px;
+        border-radius: 6px;
+        background-color: $red;
+    }
 }
 
 .content-sect--img{
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+#post-title{
+    color: $grey-blu-d;
+}
+
+#group-name{
+    color: $blue;
 }

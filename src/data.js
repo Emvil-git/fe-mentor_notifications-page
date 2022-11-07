@@ -31,6 +31,7 @@ export const usersData = [
 
 export const notifData = [
     {
+        id: 1,
         user: usersData.find(user => user.name === "Mark Webber"),
         type: "post",
         data: {
@@ -39,6 +40,7 @@ export const notifData = [
         time: "1m"
     },
     {
+        id: 2,
         user: usersData.find(user => user.name === "Angela Gray"),
         type: "follow",
         data: {
@@ -46,6 +48,7 @@ export const notifData = [
         time: "5m"
     },
     {
+        id: 3,
         user: usersData.find(user => user.name === "Jacob Thompson"),
         type: "group",
         data: {
@@ -54,6 +57,7 @@ export const notifData = [
         time: "1 day"
     },
     {
+        id: 4,
         user: usersData.find(user => user.name === "Rizky Hasanuddin"),
         type: "message",
         data: {
@@ -62,6 +66,7 @@ export const notifData = [
         time: "5 days"
     },
     {
+        id: 5,
         user: usersData.find(user => user.name === "Kimberly Smith"),
         type: "img-comment",
         data: {
@@ -70,6 +75,7 @@ export const notifData = [
         time: "1 week"
     },
     {
+        id: 6,
         user: usersData.find(user => user.name === "Nathan Peterson"),
         type: "post",
         data: {
@@ -78,6 +84,7 @@ export const notifData = [
         time: "2 weeks"
     },
     {
+        id: 7,
         user: usersData.find(user => user.name === "Anna Kim"),
         type: "group",
         data: {
