@@ -20,11 +20,18 @@ code {
     monospace;
 }
 
-// @font-face {
-//   font-family: 'Plus Jakarta Sans';
-//   src: local('Plus Jakarta Sans') url(./assets/fonts/static/PlusJakartaSans-Medium.ttf) format('ttf');
-// }
-// @font-face {
-//   font-family: 'Jakarta-XB';
-//   src: url(./assets/fonts/static/PlusJakartaSans-ExtraBold.ttf) format('ttf');
-// }
+::-webkit-scrollbar {
+  width: 8px;
+
+  margin-left: -2rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue25;
+  border-radius: 13px;
+  border: 1px solid $white;
+}

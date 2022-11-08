@@ -42,7 +42,7 @@ function App() {
 
       <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded with ♥ by <a href="#">Emvil</a>.
+      Coded with ♥ by <a href="https://github.com/Emvil-git" target="_blank">Emvil</a>.
       </div>
     </div>
   );
