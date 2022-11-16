@@ -1,31 +1,31 @@
 export const usersData = [
   {
     name: "Angela Gray",
-    imgUrl: "/images/avatar-angela-gray.webp",
+    imgUrl: "images/avatar-angela-gray.webp",
   },
   {
     name: "Anna Kim",
-    imgUrl: "/images/avatar-anna-kim.webp",
+    imgUrl: "images/avatar-anna-kim.webp",
   },
   {
     name: "Jacob Thompson",
-    imgUrl: "/images/avatar-jacob-thompson.webp",
+    imgUrl: "images/avatar-jacob-thompson.webp",
   },
   {
     name: "Kimberly Smith",
-    imgUrl: "/images/avatar-kimberly-smith.webp",
+    imgUrl: "images/avatar-kimberly-smith.webp",
   },
   {
     name: "Mark Webber",
-    imgUrl: "/images/avatar-mark-webber.webp",
+    imgUrl: "images/avatar-mark-webber.webp",
   },
   {
     name: "Nathan Peterson",
-    imgUrl: "/images/avatar-nathan-peterson.webp",
+    imgUrl: "images/avatar-nathan-peterson.webp",
   },
   {
     name: "Rizky Hasanuddin",
-    imgUrl: "/images/avatar-rizky-hasanuddin.webp",
+    imgUrl: "images/avatar-rizky-hasanuddin.webp",
   },
 ]
 
@@ -71,7 +71,7 @@ export const notifData = [
         user: usersData.find(user => user.name === "Kimberly Smith"),
         type: "img-comment",
         data: {
-            imgUrl: "/images/image-chess.webp"
+            imgUrl: "images/image-chess.webp"
         },
         time: "1 week"
     },
